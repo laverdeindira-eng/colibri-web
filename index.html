@@ -76,4 +76,135 @@
     }
 
     section h2 {
-      text-align: center
+      text-align: center;
+      color: var(--color-principal);
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    p, li {
+      color: #444;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    ul { list-style: none; padding: 0; text-align: center; }
+    ul li::before {
+      content: "• ";
+      color: var(--color-principal);
+      font-weight: bold;
+    }
+
+    /* SLIDER */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 20s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(0); }
+      25% { transform: translateX(-100%); }
+      45% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      70% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      95% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* CONTACTO */
+    .boton-contacto {
+      display: inline-block;
+      background-color: var(--color-principal);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      margin-top: 15px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .boton-contacto:hover {
+      background-color: var(--color-secundario);
+    }
+
+    footer {
+      background: var(--color-principal);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Colibrí</h1>
+    <p>Agencia de Marketing y Producción Audiovisual</p>
+  </header>
+
+  <nav>
+    <a href="#quienes">Quiénes Somos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#portafolio">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="quienes">
+    <h2>Quiénes Somos</h2>
+    <p>En Colibrí combinamos creatividad, estrategia y tecnología para impulsar marcas con propósito. Somos un equipo multidisciplinario especializado en marketing digital, comunicación visual y producción audiovisual.</p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Estrategias de marketing digital</li>
+      <li>Gestión de redes sociales y campañas publicitarias</li>
+      <li>Diseño de marca e identidad visual</li>
+      <li>Producción audiovisual y fotografía corporativa</li>
+      <li>Desarrollo web profesional</li>
+    </ul>
+  </section>
+
+  <section id="portafolio">
+    <h2>Nuestro Trabajo</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Equipo de marketing trabajando">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Reunión creativa empresarial">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="Producción de video">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Trabajo de oficina moderna">
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Quieres hacer crecer tu marca con Colibrí? Escríbenos y conversemos sobre tu proyecto.</p>
+    <a class="boton-contacto" href="mailto:info@colibri.com">Contáctanos</a>
+  </section>
+
+  <footer>
+    © 2025 Colibrí · Agencia de Marketing y Producción Audiovisual
+  </footer>
+</body>
+</html>
